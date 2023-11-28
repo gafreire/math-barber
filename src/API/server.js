@@ -24,7 +24,4 @@ app.use((error, rec, res, next) => {
     })
     
 })
-app.listen(8000, () => {
-    console.log("funcionando")
-})
-
+app.listen(process.env.PORT || 3001, () => console.log('Server in running'))
