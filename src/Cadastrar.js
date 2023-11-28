@@ -17,7 +17,13 @@ function Cadastrar() {
       const novoCliente = response.data;
       navigate('/login')
     } catch (error) {
-      console.log(error)
+      if(error.request.status != 200) {
+        Swal.fire({
+          title: "Erro!",
+          text: "Preencha todos os dados!",
+          icon: "error"
+        });
+      }
     }
   }
 
