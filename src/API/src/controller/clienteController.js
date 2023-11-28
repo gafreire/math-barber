@@ -3,7 +3,7 @@ const yup = require('yup')
 const validacaoSchema = yup.object().shape({
     emailCliente: yup.string().required("Campo obrigatório"),
     senhaCliente: yup.string().required("Campo obrigatório"),
-    nomeCliente: yup.string().required("Campo obrigatório")
+    nomeCliente: yup.string().required("Campo obrigatório"),
  })
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
         } = req.body
 
         try {
-            await validacaoSchema.validate(req.body, { abortEarly: false })
+            await validacaoSchema.validate(req.body, { abortEarly:false})
             
             await knex('cliente').insert({
                 nomeCliente,

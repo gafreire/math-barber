@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import axios from 'axios';
 
+
 function Cadastrar() {
   const navigate = useNavigate();
 
@@ -17,13 +18,7 @@ function Cadastrar() {
       const novoCliente = response.data;
       navigate('/login')
     } catch (error) {
-      if(error.request.status != 200) {
-        Swal.fire({
-          title: "Erro!",
-          text: "Preencha todos os dados!",
-          icon: "error"
-        });
-      }
+      console.log(error.response)
     }
   }
 
