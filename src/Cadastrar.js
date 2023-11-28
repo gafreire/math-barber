@@ -10,11 +10,6 @@ import axios from 'axios';
 function Cadastrar() {
   const navigate = useNavigate();
 
-
-  const handleCadastrar = () => {
-    navigate('/');
-  };
-
   const handleSubmit = async (values) => {
     console.log(values)
     try {
@@ -22,7 +17,7 @@ function Cadastrar() {
       const novoCliente = response.data;
       navigate('/login')
     } catch (error) {
-
+      console.log(error)
     }
   }
 
