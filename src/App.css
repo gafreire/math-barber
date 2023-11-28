@@ -1,38 +1,341 @@
-.App {
+
+
+.logo_math {
+  max-width: 100%;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*  position: absolute; */
+}
+
+.registro {
+  font-family: Poppins;
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  
+}
+
+.logo_insta {
+  right: 30px;
+  top: 20px;
+  max-width: 36px; 
+}
+
+.desenho {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: #BD00FF;
+  margin-bottom: 20px;
+}
+
+.botao_entrar {
+  background: none;
+  color: white;
+  border: 1px solid #BD00FF;
+  padding: 5px 10px;
+  border-radius: 10px;
+  top: 10px;
+}
+
+.botao_deletar {
+  background: none;
+  color: black;
+  border: 1px solid #BD00FF;
+  padding: 5px;
+  top: 10px;
+}
+
+.botao_topo {
+  display: flex;
+  width: 90%;
+  top: 20px;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.texto {
+  color: #FFF;
   text-align: center;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cadastrar {
+  display: flex;
+  width: 300px;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #BD00FF;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.geral {
+  min-height: 100vh;  /* Defina a altura mínima da visualização para 100% da altura da viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rodape {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-bottom: 20px;
+  max-height: 80%;
+  width: 100%;
+  margin-top: auto; /* Adicione esta linha para ajustar o posicionamento do rodapé */
+}
+
+.corpo {
+  flex: 1;  /* Faz com que este elemento ocupe todo o espaço disponível verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  border: 1px solid #BD00FF;
+}
+
+.cor {
+  color: #BD00FF
+}
+
+.formulario input {
+  flex: 1;
+  border: none;
+  padding: 5px 15px; /* Aumente o espaço à esquerda para 15px e à direita para 5px */
+  border-radius: 50px;
+  outline: none;
+  background-color: transparent;
+  color: white; /* Defina a cor do texto como branco */
+  gap: 10px;
+}
+
+.formulario input::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form_cadastro {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/**************************************************************************/
+/* Telas iniciais */
+
+.logo_inicial {
+  max-width: 100%;
+  top: 50px;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*  position: absolute; */
 }
+
+.botao_acao {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.texto2 {
+  display: flex;
+  justify-content: center;
+}
+
+.text2 p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  width: 90%;
+}
+
+.botoes_servicos {
+  display: flex;
+  width: 330px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+
+  border-radius: 0px 50px 50px 50px;
+  border: 1px solid #BD00FF;
+  background: none;
+}
+
+.cadastrar_agendamento {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #BD00FF;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* CalendarioBarbearia.css */
+.custom-datepicker {
+  display: block;
+  margin-top: 40px;
+}
+
+
+.calendario {
+  display: flex;
+  align-items: center;
+}
+
+.funcionarios-container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.funcionario-selecionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #BD00FF 5px solid;
+    
+}
+
+.funcionario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+}
+
+.funcionario-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.tamanho {
+  width: 100%;
+}
+
+.titulos {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 3px 10px;
+  margin-top: 3px;
+}
+
+.custom-date-select {
+  width: 200px; /* Define a largura desejada para o campo de data */
+  text-align: center; /* Centraliza o texto dentro do campo */
+  padding: 5px; /* Adiciona algum preenchimento interno para espaçamento */
+  font-size: 12px; /* Define o tamanho da fonte desejado */
+  width: 100%; /* Defina a largura desejada */
+padding: 10px; /* Adicione algum preenchimento interno para melhorar a aparência */
+margin-bottom: 15px; /* Adicione alguma margem inferior para separar os campos */
+}
+
+select {
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+  /* Adicione outros estilos desejados, se necessário */
+}
+
+
+
+.campo-dataHora {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: auto;
+    max-height: 590px;
+}
+
+.botao_cancelar_drawer {
+    background: none;
+    color: black;
+    border: 1px solid #BD00FF;
+    padding: 0px 10px 3px 10px;
+    
+  
+}
+
+.botao_drawer button {
+  background: none;
+    color: white;
+    border: 1px solid #BD00FF;
+    padding: 0px 10px 3px 10px;
+    background-color: #BD00FF;
+    height: 50px;
+}
+
+.botao_drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65vh;
+}
+
+
+
+
+
+
+

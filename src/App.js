@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import './App.css'
+import logo_math from './images/logo_math.png';
+import logo_insta from './images/logo_insta.png';
+import { useNavigate } from 'react-router-dom';
+import desenho from './images/desenho.png';
 
-function App() {
+function Login() {
+  const navigate = useNavigate();
+
+  const handleCadastrar = () => {
+    navigate('/cadastrar');
+  };
+
+  const handleLogin = () => {
+    navigate('/login');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='geral'>
+    <div className='topo'>
+      <div className='corpo'>
+        <div className='botao_topo'>
+            <button className='botao_entrar' onClick={handleLogin}> Entrar </button>
+            <img src={logo_insta} className='logo_insta'/>
+        </div>
+        
+        <img src={logo_math} className='logo_math' />
+      </div> 
+      <div className='desenho'>
+        <img src={desenho} />
+      </div>  
+      
     </div>
-  );
+      <div className='rodape'>
+        <div className='line'></div>
+        <p className='texto'>Cabelo cortado é tudo que um homem precisa</p>
+        <button className='cadastrar' onClick={handleCadastrar}>Cadastrar</button>
+      </div>
+    
+    </div>
+      
+    </>
+  )
 }
 
-export default App;
+export default Login
