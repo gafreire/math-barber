@@ -20,7 +20,7 @@ module.exports = {
             const clienteExistente = await knex('cliente').where('emailCliente', emailCliente).first()
             console.log(clienteExistente)
             if (clienteExistente) {
-                return res.status(100).json({ error: "E-mail já cadastrado" })
+                return res.status(400).json({ error: "E-mail já cadastrado" })
             }
 
             await knex('cliente').insert({
@@ -33,6 +33,7 @@ module.exports = {
             })
 
         } catch(error) {
+           
             if (error instanceof yup.ValidationError)
                 return res.status(400).json({ error: error.errors })
             next(error)

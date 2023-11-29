@@ -19,6 +19,7 @@ function Cadastrar() {
       navigate('/login')
     } catch (error) {
       console.log(error)
+      console.log(JSON.parse(error.request.response).error)
       if(error.response.data == 'E-mail já cadastrado') {
         Swal.fire({
           title: "Erro!",
