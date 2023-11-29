@@ -36,7 +36,7 @@ function Login() {
 
   async function handleSubmit(values) {
     try {
-      const response = await axios.post('https://math-barber.onrender.com/login', values);
+      const response = await axios.post('http://localhost:8000/login', values);
       console.log(response)
       if (response.status == 200) {
         navigate('/inicio', { 

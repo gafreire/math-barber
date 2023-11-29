@@ -25,8 +25,8 @@ function Agendamentos() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('https://math-barber.onrender.com/agendamento');
-      const responseServico = await axios.get('https://math-barber.onrender.com/servico');
+      const response = await axios.get('http://localhost:8000/agendamento');
+      const responseServico = await axios.get('http://localhost:8000/servico');
       console.log(response.data.resposta);
       console.log(responseServico.data.options);
       setResponse(response.data.resposta);
@@ -67,7 +67,7 @@ function Agendamentos() {
   const handleDeletar = async (idAgendamentos) => {
     try {
       // Faça uma requisição para deletar o agendamento com base no ID
-      await axios.post(`https://math-barber.onrender.com/agendamento/${idAgendamentos}`);
+      await axios.post(`http://localhost:8000/agendamento/${idAgendamentos}`);
       Swal.fire({
         title: "Sucesso!",
         text: "Agendamento cancelado com sucesso!",
