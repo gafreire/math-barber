@@ -201,7 +201,8 @@ const CalendarioBarbearia = () => {
               <button className='botao_entrar' onClick={handleHome}> 
               <HomeOutlined style={{ fontSize: '20px' }} />
               </button>
-              <img src={logo_insta} className='logo_insta' />
+              <a href="https://www.instagram.com/math_barber10/" target="_blank" rel="noopener noreferrer">
+            <img src={logo_insta} className='logo_insta' /> </a>
             </div>
             <img src={logo_math} className='logo_math' />
           </div>

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './App.css';
 import logo_math from './images/logo_math.png';
 import logo_insta from './images/logo_insta.png';
+import Swal from 'sweetalert2'
 
 function Login() {
   const navigate = useNavigate();
@@ -48,7 +49,11 @@ function Login() {
         alert('Credenciais inválidas. Tente novamente.');
       }
     } catch (error) {
-      console.error(error);
+      Swal.fire({
+        title: "Erro!",
+        text: "Credenciais inválidas. Tente novamente.",
+        icon: "error"
+      });
     }
   }
 
@@ -60,7 +65,8 @@ function Login() {
             <button className="botao_entrar" onClick={handleCadastrar}>
               Registrar
             </button>
-            <img src={logo_insta} className="logo_insta" alt="Instagram" />
+            <a href="https://www.instagram.com/math_barber10/" target="_blank" rel="noopener noreferrer">
+            <img src={logo_insta} className='logo_insta' /> </a>
           </div>
           
           <img src={logo_math} className="logo_math" alt="Logo Math" />

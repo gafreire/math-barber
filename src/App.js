@@ -23,7 +23,8 @@ function Login() {
       <div className='corpo'>
         <div className='botao_topo'>
             <button className='botao_entrar' onClick={handleLogin}> Entrar </button>
-            <img src={logo_insta} className='logo_insta'/>
+            <a href="https://www.instagram.com/math_barber10/" target="_blank" rel="noopener noreferrer">
+            <img src={logo_insta} className='logo_insta' /> </a>
         </div>
         
         <img src={logo_math} className='logo_math' />

@@ -48,10 +48,10 @@ function Agendamentos() {
     return `${dia}/${mes}/${ano}`;
   }
 
-  const handleCadastrar = () => {
-    navigate('/agendamentos', { 
+  const handleAgendar = () => {
+    navigate('/CalendarioBarbearia', { 
       state: { 
-        nome: nomeCliente, 
+        nome: nomeClienteNovo, 
         id: idCliente
       } });
   };
@@ -105,7 +105,8 @@ function Agendamentos() {
         <div className='corpo'>
           <div className='botao_topo'>
             <button className='botao_entrar' onClick={handleInicio}> <HomeOutlined style={{ fontSize: '20px' }} /> </button>
-            <img src={logo_insta} className='logo_insta' />
+            <a href="https://www.instagram.com/math_barber10/" target="_blank" rel="noopener noreferrer">
+            <img src={logo_insta} className='logo_insta' /> </a>
           </div>
 
           <img src={logo_math} className='logo_math' />
@@ -120,9 +121,6 @@ function Agendamentos() {
                 bordered={false}
                 style={{ width: 300, background: '#BD00FF', color: 'white' }}
                 extra={<div>
-                <button className='botao_deletar' onClick={() => handleEditar(item.idAgendamentos)}>
-                    <EditOutlined style={{ fontSize: '20px' }} />
-                  </button>
                   <button className='botao_deletar' onClick={() => handleDeletar(item.idAgendamentos)}>
                     <DeleteOutlined style={{ fontSize: '20px' }} />
                   </button>
@@ -140,8 +138,9 @@ function Agendamentos() {
           ))
         ) : (
           <div className='rodape'>
-            <p className='texto'>Cabelo cortado é tudo que um homem precisa</p>
-            <button className='cadastrar' onClick={handleCadastrar}>Agendar horário</button>
+            <p className='texto'>Você não possui nenhum agendamento! Realize agora!</p>
+            <br></br>
+            <button className='cadastrar' onClick={handleAgendar}>Agendar horário</button>
           </div>
         )}
       </div>
