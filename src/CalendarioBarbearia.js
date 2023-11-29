@@ -35,8 +35,6 @@ const CalendarioBarbearia = () => {
   useEffect(() => {
 
     const fetchData = async () => {
-      console.log(nomeCliente)
-      console.log(idCliente)
       const response = (await axios.get('https://math-barber.onrender.com/funcionario'))
       setFuncionario(response.data.options)
 
@@ -48,7 +46,6 @@ const CalendarioBarbearia = () => {
 
       const horariosOcupados = await axios.get('https://math-barber.onrender.com/horaOcupada');
       setHorariosOcupados(horariosOcupados.data.horariosOcupados)
-      console.log(horariosOcupados.data.horariosOcupados)
 
       
     }
@@ -62,7 +59,6 @@ const CalendarioBarbearia = () => {
     setFuncionarioSelecionado(nome.value);
     setFuncionarioSelecionadoClasse('funcionario-selecionado');
     setFuncSelec(true)
-    console.log(nome)
   };
 
   const handleHome = () => {
@@ -75,19 +71,16 @@ const CalendarioBarbearia = () => {
 
   const handleDataChange = (e) => {
     setData(e.target.value);
-    console.log(e.target.value)
     setDataSelec(true)
   };
 
   const handleHorarioChange = (e) => {
     setHorario(e.target.value);
-    console.log(e.target.value)
     setHoraSelec(true)
   };
 
   const handleSelecionarServico = (e) => {
     setServicoSelecionado(e.target.value);
-    console.log(e.target.value)
   };
 
   const generateHorarios = () => {
@@ -113,12 +106,9 @@ const CalendarioBarbearia = () => {
   
       const horariosFiltrados = horariosOcupados
         .filter((agend) => agend.idFuncionario === selectedFunc);
-      console.log(horariosFiltrados)
   
       const horariosFiltrados2 = horariosFiltrados
         .filter((agend) => agend.data === selectedData + 'T00:00:00.000Z');
-      console.log(selectedData)
-      console.log(horariosFiltrados2)
       // Remove os horários presentes em horariosFiltrados2 do array horarios
       horariosFiltrados2.forEach((agend) => {
         const horarioFormatado = agend.hora.slice(0, 5); // Remover os segundos

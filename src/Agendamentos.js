@@ -20,20 +20,16 @@ function Agendamentos() {
   const nomeCliente = location.state.nome.nomeCliente;
   const nomeClienteNovo = location.state.nome; 
   const idCliente = location.state.id;
-  console.log(idCliente);
-  console.log(nomeCliente);
+
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get('https://math-barber.onrender.com/agendamento');
       const responseServico = await axios.get('https://math-barber.onrender.com/servico');
-      console.log(response.data.resposta);
-      console.log(responseServico.data.options);
       setResponse(response.data.resposta);
       setResponseServico(response.data.resposta)
     };
 
-    console.log(response)
 
     fetchData()
       .catch(console.error);

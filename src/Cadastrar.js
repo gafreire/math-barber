@@ -13,12 +13,12 @@ function Cadastrar() {
   const navigate = useNavigate();
 
   const handleSubmit = async (values) => {
-    console.log(values)
     try {
       const response = await axios.post('https://math-barber.onrender.com/cliente', values)
       const novoCliente = response.data;
       navigate('/login')
     } catch (error) {
+      console.log(error)
       Swal.fire({
         title: "Erro!",
         text: "Preencha todos os dados!",

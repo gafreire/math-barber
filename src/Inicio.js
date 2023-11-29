@@ -11,8 +11,6 @@ function Inicio() {
   const location = useLocation();
   const nomeCliente = location.state.nome;
   const idCliente = location.state.id;
-  console.log(idCliente)
-  console.log(nomeCliente)
 
   const handleCadastrar = () => {
     navigate('/agendamentos', { 
