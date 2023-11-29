@@ -33,7 +33,6 @@ module.exports = {
             })
 
         } catch(error) {
-           
             if (error instanceof yup.ValidationError)
                 return res.status(400).json({ error: error.errors })
             next(error)
