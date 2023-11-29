@@ -116,7 +116,7 @@ const CalendarioBarbearia = () => {
       console.log(horariosFiltrados)
   
       const horariosFiltrados2 = horariosFiltrados
-        .filter((agend) => agend.data === selectedData + 'T03:00:00.000Z');
+        .filter((agend) => agend.data === selectedData + 'T00:00:00.000Z');
       console.log(selectedData)
       console.log(horariosFiltrados2)
       // Remove os horários presentes em horariosFiltrados2 do array horarios
