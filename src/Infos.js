@@ -17,7 +17,7 @@ function Infos() {
   const handleSubmit = async (values) => {
     console.log(values)
     try {
-      const response = await axios.post('http://localhost:8000/cliente', values)
+      const response = await axios.post('https://math-barber.onrender.com/cliente', values)
       const novoCliente = response.data;
     } catch (error) {
 

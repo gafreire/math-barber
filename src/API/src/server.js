@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes')
+const routes = require('../routes')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 })
 
 app.use((error, rec, res, next) => {
-    res.status(error.status || 504)
+    res.status(error.status || 500)
     res.json({
         error: error.message
     })

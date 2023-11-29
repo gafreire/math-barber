@@ -37,16 +37,16 @@ const CalendarioBarbearia = () => {
     const fetchData = async () => {
       console.log(nomeCliente)
       console.log(idCliente)
-      const response = (await axios.get('http://localhost:8000/funcionario'))
+      const response = (await axios.get('https://math-barber.onrender.com/funcionario'))
       setFuncionario(response.data.options)
 
-      const responseServico = (await axios.get('http://localhost:8000/servico'))
+      const responseServico = (await axios.get('https://math-barber.onrender.com/servico'))
       setServico(responseServico.data.options)
 
-      const agendamentos = await axios.get('http://localhost:8000/agendamento');
+      const agendamentos = await axios.get('https://math-barber.onrender.com/agendamento');
       setAgendamentos(agendamentos.data.resposta)
 
-      const horariosOcupados = await axios.get('http://localhost:8000/horaOcupada');
+      const horariosOcupados = await axios.get('https://math-barber.onrender.com/horaOcupada');
       setHorariosOcupados(horariosOcupados.data.horariosOcupados)
       console.log(horariosOcupados.data.horariosOcupados)
 
@@ -165,7 +165,7 @@ const CalendarioBarbearia = () => {
           alert("Por favor, preencha todos os campos antes de agendar.");
           return;
         } else {
-          const response = await axios.post('http://localhost:8000/agendamento', {
+          const response = await axios.post('https://math-barber.onrender.com/agendamento', {
             idCliente: idCliente.idCliente,
             idServico: servicoSelecionado,
             idFuncionario: funcionarioSelecionado,
