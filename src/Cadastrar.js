@@ -19,11 +19,18 @@ function Cadastrar() {
       navigate('/login')
     } catch (error) {
       console.log(error)
+      if(error.response.data == 'E-mail já cadastrado') {
+        Swal.fire({
+          title: "Erro!",
+          text: "E-mail já cadastrado!",
+          icon: "error"
+        });
+      } else {
       Swal.fire({
         title: "Erro!",
         text: "Preencha todos os dados!",
         icon: "error"
-      });
+      });}
     }
   }
 
